@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Converter from "./Converter/Converter.js";
-import { Tabs, Tab, TabPanel, TabList } from "react-web-tabs";
-import "react-web-tabs/dist/react-web-tabs.css";
 
 import "./styles.css";
 
@@ -11,6 +9,22 @@ import Temperature from "./units/Temperature";
 import Length from "./units/Length";
 
 class App extends React.Component {
+  state = {
+    clicks: 0,
+    class: ""
+  };
+
+  changeButtonColor = id => {};
+
+  handleClick = event => {
+    let className = event.target.className;
+    this.setState({ clicks: App.state.clicks + 1 });
+    if (this.state.clicks === 2) {
+      if (this.state.class === className) {
+      }
+    }
+  };
+
   render() {
     return (
       <div>
